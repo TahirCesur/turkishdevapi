@@ -1,0 +1,168 @@
+API NOTLARI
+
+- API --> Aplication Prgramming Interface dir...
+- UI --> User Interface- Kullanici Arayuzu...
+- Databease --> Veri Taban�
+
+- API, bir uygulaman�n i�levlerine d��ar�dan veya uzaktan eri�ilip bu i�levlerin kullan�lmas�n� sa�layan aray�zd�r.
+- API, farkl� uygulamalar veya ayn� uygulaman�n par�alar� aras�ndaki bir aray�z veya ileti�im protokol�d�r.
+
+- API�in UI (User Interface- Kullanici Arayuzu) yoktur.
+- API ile normal hayatimizda UI ile yaptigimiz islemleri kodlarla yapabiliriz.
+- Uygulamalar aras� t�m ba�lantilari koordine eden ve otomasyon ile onumuze getiren UI degil Backend�dir...
+
+- �al��ma sistemi restorana benzer..
+M��teri gelir direk mutfa�a gidip istedi�ini almaz..
+Garsona talepte bulunup men�y� verir ve bu �ekilde arac�l�k yap�p a���lar yard�m�yla talepe cevap vermi� olur..
+
+***
+API da Request ve Response vard�r.. �stek ve Cevap..
+Bu da API da URL yani endpoint ile sa�lan�r..
+
+
+- Path ve Query Parametre Nedir ?
+
+- Path :
+
+Bir kayna�� tanimlamak veya daha ayr�nt�l� nesneleri �zerinde hareket etmek istiyorsaniz Path Param kullanmal�s�n�z. 
+
+https://gmibank.com/api/tpi-customers -->
+https://gmibank.com --> base url k�sm�d�r...
+/api/tpi-customers --> pate parametreleridir.. Her bir "/" tan sonra path parametresidir...
+
+Query :
+
+��eleri s�ralamak veya filtrelemek istiyorsan�z, Query Parametresi kullanmal�s�n�z. 
+Query parametreleri, kaynaklar� daha iyi bir �ekilde tan�mlamaya yard�mc� olan benzersiz �zelliklere sahiptir.
+
+Query parametreleri URL�de "?" ��aretinin sa� taraf�nda g�r�n�rken, Path parametreleri soru i�areti i�aretinden �nce gelir.
+
+URL'nin bir par�as� olduklar� i�in Path parametrelerindeki de�erleri atlayamazs�n�z.
+Query parametreleri key-value seklinde kullanilir.
+
+https://gmibank.com/api/users?id=1
+
+Query parametre --> id=1 soru i�aretinden sonraki k�s�md�r...
+
+
+- Swagger Nedir?
+
+Web API geli�tirmede en �nemli ihtiya�lardan biri dok�mantasyon ihtiyac�d�r. 
+API methodlar�n�n ne i�e yarad��� ve nas�l kullan�ld���nin dok�mantasyon i�eresinde anla��l�r olmas� gerekir.
+
+Api dok�mantasyonunu el eme�i ile yazmak hem zordur hemde g�ncel tutmas� imkans�zd�r. Bir bi�imde bu dok�mantasyonu g�ncel olarak �retmek gerekir. Burada imdad�m�za swagger yeti�iyor.
+
+*** Swagger��n �nemli bir amac� ;  RestApi ler i�in bir aray�z sa�lamakt�r. Bu insanlar�n kaynak koda eri�meden RestApi lerin �zelliklerini g�rmesine, incelemesine ve anlamas�na olanak sa�lar.
+
+Base URL --> http://petstore.swagger.io/
+
+SWAGGER var olan bir API�yi nasil kullanacagimizi gosteren bir dokumandir.
+Swagger, yeni gittigimiz bir sehrin gezilecek yerlerini ve nerede ne bulabilecegimizi gosteren bir harita gibidir.
+
+- API da 5 �nemli Request vard�r...
+
+*** CRUD
+
+C: POST : Yeni bir nesne olu�turmak i�in kullan�l�r. (Creat)
+R: GET : Datay� okuma i�in kullan�l�r... (Read)
+U : PUT : T�m Data da g�ncelleme veye yenileme yapmak i�in kullan�l�r. (Update)
+U : PATCH : Bir k�s�m var olan datay� g�ncellemek i�in kullan�l�r. (Update)
+D : DELETE : Datay� silmek i�in kullan�l�r. (Delete)
+
+
+Get ve Delete i�in data kullan�lmaz.. Di�erlerine data g�ndermek gerekir...
+
+- UI --> Frontend
+- Databease --> Backend
+
+-Authentication :
+
+Kimlik do�rulama, bir kullan�c�n�n veya program�n bir sisteme eri�irken kim oldu�unu kan�tlama i�lemidir. Kimlik do�rulama teknolojisi, bir kullan�c�n�n kimlik bilgilerinin yetkili kullan�c�lar�n veri taban�nda veya bir veri do�rulama sunucusundaki kimlik bilgileriyle e�le�ip e�le�medi�ini kontrol ederek sistemler i�in eri�im kontrol� sa�lar.
+
+
+-Authorization :
+
+�nsan kaynaklar� personeli normalde �al��an kay�tlar�na eri�im yetkisine sahiptir ve bu politika genellikle bir bilgisayar sisteminde eri�im kontrol kurallar� olarak ger�ekle�tirilir.. 
+
+Authorization, bir varl���n eri�im hakk�n�, kimli�ini kan�tlad��� zamand�r. Ba�ka bir deyi�le, Yetkilendirme, istekte bulunma hakk�n�z�n oldu�unu kan�tlar.
+
+
+
+- Http Durum Kodlari-- Status Kodlar
+
+�stemci bir sunucu i�eri�ine HTTP kullanarak ula�maya �al��t���nda sunucu yan�t�n durumunu belirten bir say�sal kod g�nderir.
+Baz� durumlarda HTTP durum kodu (HTTP Status Code) istemcinin taray�c�s�nda da g�sterilebilir
+
+�rn; 200, 301, 302, 404 ve 500 kodlar� en yayg�n olanlard�r.
+
+Durum kodlar�nda 1�den 5�e kadar grupland�r�lm��t�r.
+
+1xx Bilgi -- ��le devam ediyor...
+2xx Ba�ar� 
+3xx Y�nlendirme 
+4xx Taray�c� Hatas� 
+5xx Sunucu Hatas�--Developer �n sorumlulu�undad�r..
+
+- Kod Mesaj ve Anlamlar�
+
+1xx	Bilgi
+100	Continue	Devam
+101	Switching Protocols	Anahtarlama Protokol�
+102	Processing	WebDAV : ��lem
+
+2xx	Ba�ar�
+200	OK	Tamam
+201	Created	Olu�turuldu
+202	Accepted	Onayland�
+203	Non-Authoritative Information	Yetersiz Bilgi
+204	No Content	��erik Yok
+205	Reset Content	��eri�i Ba�tan al
+206	Partial Content	K�smi ��erik
+207	Multi-Status	WebDAV :�ok-Stat�
+210	Content Different	WebDAV :Farkl� ��erik
+
+3xx	Y�nlendirme
+300	Multiple Choices	�ok Se�enek
+301	Moved Permanently	Kal�c� Ta��nd�
+302	Moved Temporarily	Ge�ici Ta��nd�
+303	See Other	Di�erlerine Bak
+304	Not Modified	G�ncellenmedi
+305	Use Proxy	Proxy Kullan
+307	Temporary Redirect	Ge�ici olarak yeniden g�nder
+
+4xx	�stemci hatalar�
+400	Bad Request	K�t� �stek
+401	Unauthorized	Yetkisiz
+402	Payment Required	�deme Gerekli
+403	Forbidden	Yasakland�
+404	Not Found	Sayfa Bulunamad�
+405	Method Not Allowed	�zin verilmeyen Metod
+406	Not Acceptable	Kabul Edilemez
+407	Proxy Sunucusuna giri� yapmak gerekli	
+408	�stek zaman a�am�na u�rad�	
+409	Conflict	(Hatlar) �ak��t�,�ak��ma
+410	Gone	Bak
+411	Length Required	
+412	Precondition Failed	
+413	Request Entity Too Large	
+414	Request-URI Too Long	
+415	Unsupported Media Type	Desteklenmeyen medya t�r�
+416	Requested range unsatifiable	
+417	Expectation failed	
+422	Unprocessable entity	WebDAV :
+423	Locked	WebDAV :
+424	Method failure	WebDAV :
+451	Unavailable For Legal Reasons	Yasal nedenlerle g�sterilemiyor
+
+5xx	Sunucu hatas�
+500	Internal Server Error	
+501	Uygulanmam��	
+502	Ge�ersiz A� Ge�idi	
+503	Hizmet Yok	
+504	Gateway Timeout	
+505	HTTP Version not supported	HTTP versiyonu desteklenmiyor
+507	Insufficient storage	WebDAV :
+
+- POSTMAN PROGRAMI
+
+Bu program bize haz�rl�k a�aas�nda hangi kodlar� alaca��m�z� sa�lar.. 
